@@ -237,4 +237,10 @@ public class MarqueeView extends ViewFlipper {
         void onItemClick(int position, View view);
     }
 
+    // 当外部隐藏/显示该View时可以调用该方法暂停/开始轮播(开始轮播时时间是重新计时的，不是继续计时)。如果使用startFlipping不会接着当前的轮播，视觉体验不好
+    @Override
+    public void onWindowVisibilityChanged(int visibility) {
+        super.onWindowVisibilityChanged(visibility);
+    }
+
 }
